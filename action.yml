@@ -97,3 +97,6 @@ runs:
         if [ "$has_token" == 'true' ]; then
           echo "auth_bypass_token=$(jq -r '.authBypassToken' <<<"$output")" >> "$GITHUB_OUTPUT"
         fi
+              - name: Jest coverage report
+                uses: ArtiomTr/jest-coverage-report-action@v2.2.6
+            
